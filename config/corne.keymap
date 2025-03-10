@@ -32,10 +32,19 @@
             //                    | GUI | LWR | ALT/ENT |   | HYPER/SPC | BKSP  | RSE |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T           &kp Y                       &kp U     &kp I      &kp O    &kp P     &kp ESC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G           &kp H                       &kp J     &kp K      &kp L    &kp SEMI  &lt 1 SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B           &kp N                       &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                         &kp LGUI  &mo 1  &tp LALT RET    &tp LC(LS(LA(LGUI))) SPACE  &kp BSPC  &mo 2
+&kp TAB     &kp Q  &kp W  &kp E     &kp R                   &kp T        &kp Y      &kp U             &kp I          &kp O    &kp P     &kp LEFT_BRACKET
+&kp ESCAPE  &kp A  &kp S  &kp D     &lt 1 F                 &kp G        &kp H      &kp J             &kp K          &kp L    &kp SEMI  &lt 3 SQT
+&kp LSHFT   &kp Z  &kp X  &kp C     &kp V                   &kp B        &kp N      &kp M             &kp COMMA      &kp DOT  &kp FSLH  &kp RSHFT
+                          &kp LGUI  &lt 2 NON_US_BACKSLASH  &kp ENTER    &kp SPACE  &kp LEFT_CONTROL  &kp BACKSPACE
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &trans        &kp LEFT_SHIFT  &kp PRINTSCREEN  &trans    &trans  &trans          &kp UP_ARROW    &trans           &trans    &kp RIGHT_BRACKET
+&trans  &trans  &kp CAPSLOCK  &kp LS(LCTRL)   &trans           &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME  &kp PAGE_UP
+&trans  &trans  &trans        &trans          &trans           &trans    &trans  &trans          &trans          &kp DELETE       &kp END   &kp PAGE_DOWN
+                              &trans          &trans           &trans    &trans  &trans          &trans
             >;
         };
 
@@ -47,10 +56,10 @@
             //                     | GUI |     | ALT/ENT |   | HYPER/SPACE | BKSP |    |
 
             bindings = <
-&kp PAGE_UP    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET                   &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSLH
-&kp PAGE_DOWN  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5          &kp MINUS                   &kp EQUAL  &kp GRAVE        &kp LBKT  &kp RBKT  &kp PIPE
-&kp LSHFT      &kp N6    &kp N7  &kp N8    &kp N9    &kp N0          &kp UNDER                   &kp PLUS   &kp TILDE        &kp LBRC  &kp RBRC  &kp RSHFT
-                                 &kp LGUI  &trans    &tp LALT RET    &tp LC(LS(LA(LGUI))) SPACE  &kp BSPC   &kp LCTRL
+&kp GRAVE  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT       &kp CARET     &kp AMPS       &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp EQUAL
+&trans     &kp N1    &kp N2  &kp N3    &kp N4    &kp N5          &kp NUMBER_6  &kp N7         &kp N8           &kp N9    &kp N0    &kp MINUS
+&kp F1     &kp F2    &kp F3  &kp F4    &kp F5    &kp F6          &kp F7        &kp F8         &kp F9           &kp F10   &kp F11   &kp F12
+                             &kp LGUI  &trans    &tp LALT RET    &kp LCTRL     &kp LS(LCTRL)  &kp LA(LCTRL)
             >;
         };
 
