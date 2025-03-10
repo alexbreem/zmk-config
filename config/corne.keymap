@@ -21,6 +21,43 @@
         };
     };
 
+    macros {
+        given: given {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &kp FSLH &kp FSLH &kp SPACE &kp G &kp I &kp V &kp E &kp N>;
+            label = "GIVEN";
+        };
+
+        when: when {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &kp FSLH &kp FSLH &kp SPACE &kp W &kp H &kp E &kp N>;
+            label = "WHEN";
+        };
+
+        then: then {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HOME &kp ENTER &kp UP_ARROW &kp FSLH &kp FSLH &kp SPACE &kp T &kp H &kp E &kp N>;
+            label = "THEN";
+        };
+
+        assertEquals: assertEquals {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp S &kp S &kp E &kp R &kp T &kp LS(E) &kp Q &kp U &kp A &kp L &kp S &kp LPAR &kp RPAR &kp SEMI &kp LEFT_ARROW &kp LEFT_ARROW>;
+            label = "ASSERTEQUALS";
+        };
+
+        assertThat: assertThat {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp A &kp S &kp S &kp E &kp R &kp T &kp LS(T) &kp H &kp A &kp T &kp LPAR &kp RPAR &kp SEMI &kp LEFT &kp LEFT>;
+            label = "ASSERTTHAT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -41,10 +78,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans        &kp LEFT_SHIFT  &kp PRINTSCREEN  &trans    &trans  &trans          &kp UP_ARROW    &trans           &trans    &kp RIGHT_BRACKET
-&trans  &trans  &kp CAPSLOCK  &kp LS(LCTRL)   &trans           &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME  &kp PAGE_UP
-&trans  &trans  &trans        &trans          &trans           &trans    &trans  &trans          &trans          &kp DELETE       &kp END   &kp PAGE_DOWN
-                              &trans          &trans           &trans    &trans  &trans          &trans
+&kp LC(LS(T))  &kp LC(LA(N7))  &kp LA(INSERT)  &kp LEFT_SHIFT  &kp PRINTSCREEN  &trans    &given  &assertEquals   &kp UP_ARROW    &trans           &trans    &kp RIGHT_BRACKET
+&trans         &trans          &kp CAPSLOCK    &kp LS(LCTRL)   &trans           &trans    &when   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME  &kp PAGE_UP
+&trans         &trans          &trans          &trans          &trans           &trans    &then   &assertThat     &kp LC(LS(I))   &kp DELETE       &kp END   &kp PAGE_DOWN
+                                               &trans          &trans           &trans    &trans  &trans          &trans
             >;
         };
 
