@@ -78,9 +78,9 @@
 
         layer_3 {
             bindings = <
-&kp LC(LS(T))  &kp LC(LA(N7))  &kp LA(INSERT)  &kp LEFT_SHIFT  &kp PRINTSCREEN  &trans    &given  &assertEquals   &kp UP_ARROW    &kp LG(SPACE)    &trans    &kp RIGHT_BRACKET
-&kp LC(LS(O))  &kp LA(LC(L))   &kp CAPSLOCK    &kp LS(LCTRL)   &trans           &trans    &when   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME  &kp PAGE_UP
-&trans         &trans          &trans          &trans          &trans           &trans    &then   &assertThat     &kp LC(LS(I))   &kp DELETE       &kp END   &kp PAGE_DOWN
+&kp LC(LS(T))  &kp LC(LA(N7))  &kp LA(INSERT)  &kp LEFT_SHIFT  &kp PRINTSCREEN  &trans    &given  &assertEquals   &kp UP_ARROW    &kp LG(SPACE)    &kp LA(LS(NUMBER_1))  &kp RIGHT_BRACKET
+&kp LC(LS(O))  &kp LA(LC(L))   &kp CAPSLOCK    &kp LS(LCTRL)   &trans           &trans    &when   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp HOME              &kp PAGE_UP
+&trans         &trans          &trans          &trans          &trans           &trans    &then   &assertThat     &kp LC(LS(I))   &kp DELETE       &kp END               &kp PAGE_DOWN
                                                &trans          &trans           &trans    &trans  &trans          &trans
             >;
         };
